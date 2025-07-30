@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,7 @@
 
         .form-container h1 {
             text-align: center;
-            color: #2563eb;
+            color: #67728bff;
             margin-bottom: 20px;
         }
 
@@ -78,23 +79,24 @@
         }
     </style>
 </head>
+
 <body>
     <div class="form-container">
         <div>
-          <a target="_blank"; href="https://www.8queens.com/">  <img src="{{ asset('build\assets\8queens_white_logo.png') }}" alt="Logo" 
-            style="display: block;margin:auto;margin-top:10px; width: 100px;background-color: gray;padding: 10px; border-radius: 8px;margin-bottom:0px; 
+            <a target="_blank" ; href="https://www.8queens.com/"> <img src="{{ asset('build\assets\8queens_white_logo.png') }}" alt="Logo"
+                    style="display: block;margin:auto;margin-top:10px; width: 100px;background-color: gray;padding: 10px; border-radius: 8px;margin-bottom:0px; 
             box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></a>
         </div>
         <h1 style="margin: 0px;">Create a Product</h1>
 
         @if ($errors->any())
-            <div class="error-list">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+        <div class="error-list">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
         @endif
 
         <form method="post" action="{{ route('product.store') }}">
@@ -123,8 +125,14 @@
 
             <div>
                 <input type="submit" value="Save Product">
+               <a href="{{ route('product.index') }}" style="display: block; 
+               text-align: center; margin-top: 10px; color: #2563eb;">Back to Products</a>
+
             </div>
+
+
         </form>
     </div>
 </body>
+
 </html>

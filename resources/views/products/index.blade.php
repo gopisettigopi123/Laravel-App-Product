@@ -59,7 +59,7 @@
         }
 
         th {
-            background-color: #2563eb;
+            background-color: #6b768eff;
             color: white;
         }
 
@@ -148,6 +148,7 @@
             @endforeach
         </tbody>
     </table>
+    
 
 </body>
 </html>

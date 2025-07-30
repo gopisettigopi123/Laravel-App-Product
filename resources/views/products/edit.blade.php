@@ -51,10 +51,13 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 16px;
+            display: flex;
+            margin: auto;
         }
 
         input[type="submit"]:hover {
             background-color: #2563eb;
+            /* align-items: center; */
         }
 
         .error-messages {
@@ -112,6 +115,10 @@
 
         <div>
             <input type="submit" value="Update Product">
+            <a href="{{ route('product.index') }}" style="display: block; 
+            text-align: center; margin-top: 10px; color: #2563eb;">Back to Products</a>
+             
+
         </div>
     </form>
 
